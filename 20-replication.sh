@@ -5,8 +5,8 @@ if [ $REPLICATION_ROLE = "master" ]; then
 # The following line creates the user with no encryption on the password
 #    psql -U $POSTGRES_USER -c "CREATE ROLE $REPLICATION_USER WITH REPLICATION PASSWORD '$REPLICATION_PASSWORD' LOGIN"
 # the following can allow md5 encryption of the password although it has no ENCRYPT specified as no longer needed
-     pgsql -U $POSTGRES_USER -c "CREATE ROLE $REPLICATION_USER WITH REPLICATION PASSWORD '$REPLICATION_PASSWORD' LOGIN"
-     pgsql -U $POSTGRES_USER -c "ALTER ROLE $POSTGRES_USER NOREPLICATION"
+     psql -U $POSTGRES_USER -c "CREATE ROLE $REPLICATION_USER WITH REPLICATION PASSWORD '$REPLICATION_PASSWORD' LOGIN"
+     psql -U $POSTGRES_USER -c "ALTER ROLE $POSTGRES_USER NOREPLICATION"
 
 
 elif [ $REPLICATION_ROLE = "slave" ]; then
