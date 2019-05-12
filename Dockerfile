@@ -3,7 +3,7 @@
 # nebirhos/postgres-replication
 # danieldent/postgres-replication
 
-FROM postgres:11.2-alpine
+FROM postgres:11.3-alpine
 
 MAINTAINER Matteo Angeloni (mattange@gmail.com)
 
